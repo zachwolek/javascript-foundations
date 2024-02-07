@@ -83,7 +83,7 @@ describe('Hobbit', function() {
     assert.equal(getRing(hobbit2), 'You can\'t have it!');
   });
 
-  it.skip('should start with no acquaintances', function() {
+  it('should start with no acquaintances', function() {
     var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.name, 'Bilbo');
@@ -92,7 +92,7 @@ describe('Hobbit', function() {
   });
 
    //Spicy
-  it.skip('should be able to meet people', function() {
+  it('should be able to meet people', function() {
     var people = [ {name: 'Nick', relationship: 'friend'} ];
     var bilbo = createHobbit('Bilbo');
 

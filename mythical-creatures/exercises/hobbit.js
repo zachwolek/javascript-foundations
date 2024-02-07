@@ -3,7 +3,8 @@ function createHobbit(hobbitName, hobbitAge){
     name: hobbitName,
     age: hobbitAge,
     isAdult: false,
-    isOld: false
+    isOld: false,
+    acquaintances: [],
   }
   if (hobbitAge === undefined){
     hobbit.age = 0
@@ -11,7 +12,6 @@ function createHobbit(hobbitName, hobbitAge){
     hobbit.name = 'unknown'
   }
   };
-console.log(hobbit)
   return hobbit
 };
 
@@ -25,11 +25,19 @@ function celebrateBirthday(hobbitChar){
   return hobbitChar
 };
 
+function getRing(hobbit){
+  if (hobbit.name === 'Frodo'){
+    return 'Here is the ring!'
+  } else {
+    return 'You can\'t have it!'
+  }
+}
+
 
 module.exports = {
  createHobbit, 
   celebrateBirthday, 
-  // getRing, 
+ getRing, 
   // meetPeople, 
   // findFriends
 }
