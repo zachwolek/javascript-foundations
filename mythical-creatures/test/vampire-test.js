@@ -89,7 +89,7 @@ describe('Vampire', function() {
     assert.equal(notDrinking6xsVamp.ouncesDrank, 50);
   });
 
-  it.skip('should refuse blood from victim when not thirsty', function() {
+  it('should refuse blood from victim when not thirsty', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);
@@ -104,7 +104,7 @@ describe('Vampire', function() {
     assert.equal(encounterDeliciousVictim(drank5xsVamp), `No thanks, I am too full.`);
   });
 
-  it.skip('should say if its been to a location', function() {
+  it('should say if its been to a location', function() {
     var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
 
     var response = inquirePlace(locations, 'New Orleans');
@@ -113,7 +113,7 @@ describe('Vampire', function() {
     assert.deepEqual(response, expectedResponse);
   });
 
-  it.skip('should say if its not been to a location', function() {
+  it('should say if its not been to a location', function() {
     var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
 
     var response = inquirePlace(locations, 'Idaho');
@@ -122,7 +122,7 @@ describe('Vampire', function() {
     assert.deepEqual(response, expectedResponse);
   });
 
-  it.skip('should be able to find the vampires with bats', function() {
+  it('should be able to find the vampires with bats', function() {
     var javi = createVampire('Javi');
     var brittany = createVampire('Brittany');
     var jeff = createVampire('Jeff', 'fox');
